@@ -3,8 +3,6 @@ var Blowfish = {
    * Initialize the module
    */
   initialize: function() {
-    // Initialize the emscriptenized blowfish
-    Blowfish.initialize();
     // Retrieve the crypt function from the emscripten module
     this.wrappedCrypt = Module.cwrap('crypt', 'void', ['string', 'number', 'number', 'number', 'number']);
     // Store the Module's free function
